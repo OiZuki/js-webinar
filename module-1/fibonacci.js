@@ -17,7 +17,24 @@ function fibonacci(n) {
      * Also take into consideration the documentation of the function!
      */
     // PLACE YOUR CODE BETWEEN THIS...
+    if (n < 0 || isNaN(n)) {
+        return 0;
+    }
 
+    if (n <= 1) {
+        return n;
+    }
+
+    let fibo = 1;
+    let fiboPrev = 1;
+
+    for (let i = 2; i < n; ++i) {
+        let temp = fibo;
+        fibo += fiboPrev;
+        fiboPrev = temp;
+    }
+
+    nThFibonacci = fibo;
     // ...AND THIS COMMENT LINE!
     return nThFibonacci;
 }

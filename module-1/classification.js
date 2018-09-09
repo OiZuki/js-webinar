@@ -23,7 +23,19 @@ function grade(score) {
      * Also take into consideration the documentation of the function!
      */
     // PLACE YOUR CODE BETWEEN THIS...
-
+    if (score < 0 || score > 100 || isNaN(score)) {
+        return 0;
+    } else if (score < 60) {
+        return 1;
+    } else if (score >= 60 && score < 70) {
+        return 2;
+    } else if (score >= 70 && score < 80) {
+        return 3;
+    } else if (score >= 80 && score < 90) {
+        return 4;
+    } else if (score >= 90) {
+        return 5;
+    }
     // ...AND THIS COMMENT LINE!
     return gradeOfStudent;
 }
